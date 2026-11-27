@@ -1,0 +1,11 @@
+{
+  "name": "SOUQNA - سوقنا",
+  "short_name": "SOUQNA",
+  "description": "كل الأسواق، كل التجار، في مكان واحد.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#17243a",
+  "lang": "ar",
+  "dir": "rtl"
+}
