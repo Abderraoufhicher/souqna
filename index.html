@@ -6,13 +6,53 @@
 <title>SOUQNA — سوقنا</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css"><style>
+.brand-mark {
+  background: linear-gradient(135deg,#087443 0 50%,#fff 50% 75%,#d62828 75%);
+  color: #087443;
+  border: 1px solid #dce8df;
+  font-weight: 900;
+  border-radius: 13px;
+}
+.dz-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid #e0e9e2;
+  border-radius: 30px;
+  background: rgba(8,116,67,.06);
+  color: #087443;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.dz-flag {
+  font-size: 23px;
+  line-height: 1;
+}
+.hero-dz {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #087443;
+  font-weight: 800;
+}
+@media(max-width:700px) {
+  .dz-identity {font-size:10px;padding:6px}
+  .dz-flag {font-size:19px}
+}
+</style>
 </head>
 <body>
 <div class="announcement"><span data-i18n="announcement">سوق جزائري يجمع المتاجر والموردين في مكان واحد</span><span class="announcement-tag">DZ</span></div>
 <header class="site-header">
  <a class="brand" href="#home" aria-label="SOUQNA"><span class="brand-mark">س</span><span class="brand-copy"><strong>SOUQNA</strong><small data-i18n="brandline">كل الأسواق، كل التجار، في مكان واحد</small></span></a>
- <nav id="mainNav"><a href="#categories" data-i18n="navCategories">الأقسام</a><a href="#stores" data-i18n="navStores">المتاجر</a><a href="#professional" data-i18n="navPro">الموردون والمقاولون</a><a href="#offers" data-i18n="navOffers">العروض</a></nav>
+ <nav id="mainNav"><div class="dz-identity">
+  <span class="dz-flag">🇩🇿</span>
+  <span>منصة جزائرية</span>
+</div><a href="#categories" data-i18n="navCategories">الأقسام</a><a href="#stores" data-i18n="navStores">المتاجر</a><a href="#professional" data-i18n="navPro">الموردون والمقاولون</a><a href="#offers" data-i18n="navOffers">العروض</a></nav>
  <div class="header-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="الوضع الليلي"><span id="themeIcon">☾</span></button><button class="lang-btn" id="langBtn">FR</button><button class="icon-btn mobile-menu" id="menuBtn" aria-label="Menu">☰</button><button class="account-btn" id="accountBtn" data-i18n="account">حسابي</button></div>
 </header>
 <main id="home">
@@ -26,7 +66,7 @@
  <section class="professional wrap" id="professional"><div class="pro-copy"><span class="eyebrow light" data-i18n="proEyebrow">مساحة الأعمال والمشاريع</span><h2 data-i18n="proTitle">للموردين والمقاولين،<br><em>مساحة أعمال مستقلة.</em></h2><p data-i18n="proText">أرسل طلب عروض أسعار للمواصفات والكميات التي تحتاجها، واستقبل عروضاً من الموردين في مختلف الولايات.</p><button class="btn btn-gold" id="quoteBtn" data-i18n="requestQuote">اطلب عرض سعر <span>←</span></button></div><div class="pro-art"><div class="pro-art-circle">▤</div><div class="pro-art-note"><b>RFQ</b><small data-i18n="quoteNote">طلب عروض أسعار</small></div><div class="pro-art-dot"></div></div></section>
  <section class="section wrap trust-section"><div class="trust-card"><span class="trust-icon">✓</span><div><h3 data-i18n="trustTitle">تسوّق بثقة أكبر</h3><p data-i18n="trustText">تقييمات المتاجر، شارات التوثيق، ووسائل تواصل واضحة تساعدك على اتخاذ قرار أفضل.</p></div></div><div class="trust-card"><span class="trust-icon">↗</span><div><h3 data-i18n="shareTitle">شارك ما يعجبك</h3><p data-i18n="shareText">لكل متجر ومنتج رابط مباشر يمكنك مشاركته مع أصدقائك وعملائك.</p></div></div><div class="trust-card"><span class="trust-icon">☼</span><div><h3 data-i18n="sellerTitle">نمّ تجارتك</h3><p data-i18n="sellerText">تابع أداء متجرك، واعرض منتجاتك أمام جمهور أوسع.</p></div></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">س</span><span class="brand-copy"><strong>SOUQNA</strong><small data-i18n="brandline">كل الأسواق، كل التجار، في مكان واحد</small></span></a><p data-i18n="footerText">منصة التجارة والتسوق الجزائرية الشاملة.</p><small>© <span id="year"></span> SOUQNA</small></div></footer>
+<footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">s</span><span class="brand-copy"><strong>SOUQNA</strong><small data-i18n="brandline">كل الأسواق، كل التجار، في مكان واحد</small></span></a><p data-i18n="footerText">منصة التجارة والتسوق الجزائرية الشاملة.</p><small>© <span id="year"></span> SOUQNA</small></div></footer>
 <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></section></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="app.js"></script>
