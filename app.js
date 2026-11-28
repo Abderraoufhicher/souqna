@@ -9,14 +9,36 @@ const suppliers = [
 let category = "";
 const $ = selector => document.querySelector(selector);
 
-// Restore the saved theme before wiring up the page controls.
+// Add an accessible theme switch beside the mobile menu control.
 const themeKey = "souqna_the2";
 const themeBtn = document.createElement("button");
 themeBtn.id = "themeBtn";
 themeBtn.type = "button";
 themeBtn.setAttribute("aria-label", "تفعيل الوضع الليلي");
-themeBtn.style.cssText = "border:0;background:transparent;color:inherit;font-size:21px;cursor:pointer;padding:8px;line-height:1";
+themeBtn.innerHTML = "🌙";
 $("#menuBtn").insertAdjacentElement("beforebegin", themeBtn);
+
+const darkStyles = document.createElement("style");
+darkStyles.textContent = `
+#themeBtn{display:inline-grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid #dfe4e8;border-radius:8px;background:transparent;color:inherit;font-size:21px;line-height:1;cursor:pointer;flex:none}
+#themeBtn:hover{background:#f0f2f4}#themeBtn:focus-visible{outline:2px solid #d5a64a;outline-offset:2px}
+body.dark{--paper:#0f1420;--ink:#e6ebf2;--muted:#a5b0c0;background:#0f1420;color:#e6ebf2;color-scheme:dark}
+body.dark header,body.dark nav,body.dark .search,body.dark .cat,body.dark .card,body.dark .empty,body.dark .request form,body.dark .join{background:#1a2233;color:#e6ebf2;border-color:#303b50}
+body.dark .topline{background:#111a2a;color:#cbd5e1}
+body.dark .heading h2,body.dark .search h2,body.dark .card h3,body.dark .steps h3,body.dark .join h2,body.dark .cat b{color:#e6ebf2}
+body.dark .hero{background:#0f1420;color:#e6ebf2}body.dark .hero p,body.dark .heading p,body.dark .steps p,body.dark .join p{color:#a5b0c0}
+body.dark .cat.selected,body.dark .cat:hover{background:#263248}
+body.dark .avatar{background:#29364d;color:#e6ebf2}
+body.dark input,body.dark select,body.dark textarea{background:#111a2a;color:#e6ebf2;border-color:#3a465b}
+body.dark input::placeholder,body.dark textarea::placeholder{color:#8996aa}
+body.dark .cardbottom{border-color:#303b50}body.dark .join{background:#172236}
+body.dark .meta,body.dark .desc,body.dark .steps p,body.dark .join p,body.dark .heading p{color:#a5b0c0}
+body.dark .steps article{border-color:#303b50}body.dark .empty{color:#e6ebf2}
+body.dark nav.open{background:#1a2233}body.dark #themeBtn:hover{background:#263248}
+@media(max-width:620px){#themeBtn{width:38px;height:38px;margin-inline-start:auto;margin-inline-end:8px}body.dark nav{background:#1a2233}}
+`;
+document.head.append(darkStyles);
+
 function applyTheme(isDark) {
   document.body.classList.toggle("dark", isDark);
   themeBtn.textContent = isDark ? "☀️" : "🌙";
@@ -29,21 +51,6 @@ themeBtn.addEventListener("click", () => {
   applyTheme(isDark);
   try { localStorage.setItem(themeKey, isDark ? "dark" : "light"); } catch {}
 });
-const darkStyles = document.createElement("style");
-darkStyles.textContent = `
-body.dark{--paper:#0f1420;--ink:#e6ebf2;--muted:#a5b0c0;background:#0f1420;color:#e6ebf2;color-scheme:dark}
-body.dark header,body.dark nav,body.dark .search,body.dark .cat,body.dark .card,body.dark .empty,body.dark .request form,body.dark .join{background:#1a2233;color:#e6ebf2;border-color:#303b50}
-body.dark .topline{background:#111a2a;color:#cbd5e1}
-body.dark .heading h2,body.dark .search h2,body.dark .card h3,body.dark .steps h3,body.dark .join h2{color:#e6ebf2}
-body.dark .cat.selected,body.dark .cat:hover{background:#263248}
-body.dark .avatar{background:#29364d;color:#e6ebf2}
-body.dark input,body.dark select,body.dark textarea{background:#111a2a;color:#e6ebf2;border-color:#3a465b}
-body.dark .cardbottom{border-color:#303b50}
-body.dark .join{background:#172236}
-body.dark .meta,body.dark .desc,body.dark .steps p,body.dark .join p{color:#a5b0c0}
-#themeBtn:focus-visible{outline:2px solid #d5a64a;outline-offset:2px;border-radius:6px}
-`;
-document.head.append(darkStyles);
 const topline = $(".topline");
 if (topline && !topline.textContent.includes("🇩🇿")) topline.prepend(document.createTextNode("🇩🇿 "));
 
