@@ -1,27 +1,62 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#102b3f">
-<meta name="description" content="بنيان ماركت الجزائر — منصة تجمع المقاولين بموردي مواد البناء.">
-<title>BUNYAN MARKET DZ | بنيان ماركت الجزائر</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="سوقنا — منصة تجمع المقاولين بموردي مواد البناء في الجزائر.">
+<title>Souqna | سوقنا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="topline">منصة جزائرية تجمع محترفي البناء وموردي مواد البناء في مكان واحد</div>
-<header><a class="brand" href="#"><b>ب</b><span><strong>BUNYAN <i>MARKET</i></strong><small>بنيان ماركت الجزائر · DZ</small></span></a>
-<button id="menuBtn" aria-label="القائمة">☰</button><nav id="nav"><a href="#suppliers">الموردون</a><a href="#categories">الأقسام</a><a href="#how">كيف تعمل؟</a><a class="navbtn" href="#request">اطلب عرض سعر</a></nav></header>
+<div class="topline">منصة جزائرية تجمع محترفي البناء وموردي مواد البناء</div>
+<header>
+  <a class="brand" href="#" aria-label="Souqna">
+    <img src="logo.png" alt="SOUQNA" style="height:44px" onerror="this.hidden=true">
+    <span><strong>Souqna</strong><small>سوقنا · الجزائر</small></span>
+  </a>
+  <button id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي">🌙</button>
+  <button id="menuBtn" type="button" aria-label="القائمة">☰</button>
+  <nav id="nav"><a href="#suppliers">الموردون</a><a href="#categories">الأقسام</a><a href="#request">طلب عرض سعر</a></nav>
+</header>
 <main>
-<section class="hero"><div><span class="eyebrow">● السوق الجزائري لمواد البناء</span><h1>كل ما يحتاجه مشروعك<br><em>من مواد البناء</em><br>في مكان واحد.</h1><p>اكتشف الموردين، قارن عروض الأسعار، وتواصل مع الشركات المناسبة لمشروعك — بسهولة ووضوح.</p><div class="actions"><a class="goldbtn" href="#suppliers">اكتشف الموردين ←</a><a class="outlinebtn" href="#request">أرسل طلب شراء</a></div><small class="proof">منصة واحدة للمقاولين والموردين في الجزائر</small></div>
-<div class="hero-art"><div class="ring"></div><div class="artbox"><span>▥</span><b>مواد البناء</b><small>من المصدر إلى مشروعك</small></div><div class="float f1">✓ <span>مقارنة أسهل<small>للعروض والأسعار</small></span></div><div class="float f2">⌂ <span>سوق موحد<small>للموردين والمقاولين</small></span></div></div></section>
-<section class="search"><div><small>ابدأ البحث</small><h2>ما الذي تبحث عنه اليوم؟</h2></div><form id="searchForm"><input id="q" placeholder="مثال: الإسمنت، الحديد، العزل..." aria-label="بحث"><select id="wilaya"><option value="">كل الولايات</option><option>الجزائر</option><option>وهران</option><option>قسنطينة</option><option>سطيف</option><option>البليدة</option><option>باتنة</option><option>عنابة</option><option>بسكرة</option><option>ورقلة</option></select><button>بحث عن موردين ←</button></form><p class="note">النتائج الحالية أمثلة توضيحية وليست مورّدين موثّقين.</p></section>
-<section class="section" id="categories"><div class="heading"><div><small>تصفح حسب التخصص</small><h2>أقسام مواد البناء</h2></div><p>اعثر على المورد المناسب حسب احتياجات مشروعك.</p></div><div class="cats">
-<button class="cat selected" data-cat="">▦<b>جميع المواد</b><small>كل الأقسام</small></button><button class="cat" data-cat="الإسمنت والخرسانة">▤<b>الإسمنت والخرسانة</b><small>إسمنت · خرسانة</small></button><button class="cat" data-cat="حديد البناء">⌁<b>حديد البناء</b><small>حديد تسليح · شبكات</small></button><button class="cat" data-cat="الآجر والبلوك">▧<b>الآجر والبلوك</b><small>آجر · بلوك</small></button><button class="cat" data-cat="الكهرباء والسباكة">ϟ<b>الكهرباء والسباكة</b><small>تجهيزات وملحقات</small></button><button class="cat" data-cat="التشطيبات">◇<b>مواد التشطيب</b><small>بلاط · دهان · عزل</small></button></div></section>
-<section class="section" id="suppliers"><div class="heading"><div><small>اكتشف شبكة التوريد</small><h2>موردون حسب احتياجك</h2></div><span id="count">3 نتائج تجريبية</span></div><div id="cards" class="cards"></div><div id="empty" hidden class="empty"><h3>لا توجد نتائج مطابقة</h3><p>جرّب كلمة بحث أخرى أو ولاية مختلفة.</p><button id="reset">إظهار الجميع</button></div></section>
-<section class="request" id="request"><div><small>وفّر وقت البحث</small><h2>لديك احتياجات لمشروعك؟<br><em>أرسل طلب عرض سعر واحداً.</em></h2><p>صف المواد والكميات المطلوبة، وسنهيئ المنصة لتمكينك من مقارنة عروض الموردين.</p></div>
-<form id="rfq"><h3>طلب عرض سعر تجريبي</h3><label>الاسم الكامل<input name="name" required placeholder="اسمك أو اسم الشركة"></label><div class="twocol"><label>رقم الهاتف<input name="phone" required inputmode="tel" placeholder="05 XX XX XX XX"></label><label>الولاية<select name="wilaya" required><option value="">اختر الولاية</option><option>الجزائر</option><option>وهران</option><option>قسنطينة</option><option>سطيف</option><option>ولاية أخرى</option></select></label></div><label>المواد والكميات المطلوبة<textarea name="details" required rows="3" placeholder="مثال: 100 طن إسمنت، 5 أطنان حديد..."></textarea></label><button>حفظ الطلب تجريبياً ←</button><small class="note">يحفظ الطلب على هذا الجهاز فقط ولا يرسل إلى الموردين.</small><p id="feedback" role="status"></p></form></section>
-<section class="section" id="how"><div class="heading"><div><small>خطوات بسيطة</small><h2>كيف تعمل بنيان ماركت؟</h2></div></div><div class="steps"><article><b>01</b><h3>ابحث عن المورد</h3><p>اختر نوع المادة والولاية للوصول إلى الموردين المناسبين.</p></article><article><b>02</b><h3>أرسل طلبك</h3><p>حدد احتياجاتك والكميات ومكان التسليم.</p></article><article><b>03</b><h3>قارن العروض</h3><p>قارن السعر والتوفر والتوصيل قبل الشراء.</p></article></div></section>
-<section class="join"><div><small>هل أنت مورد؟</small><h2>اجعل منتجاتك أقرب إلى مشاريع البناء.</h2><p>قريباً: مساحة خاصة للموردين لإدارة بياناتهم واستقبال طلبات الأسعار.</p></div><a class="darkbtn" href="mailto:contact@bunyanmarketdz.com?subject=طلب%20انضمام%20كمورد">اهتم بالانضمام ←</a></section>
-</main><footer><a class="brand" href="#"><b>ب</b><span><strong>BUNYAN <i>MARKET</i></strong><small>بنيان ماركت الجزائر</small></span></a><p>منصة رقمية لخدمة قطاع البناء ومواد البناء في الجزائر.</p><small>© <span id="year"></span> BUNYAN MARKET DZ</small></footer>
-<script src="app.js"></script></body></html>
+  <section class="hero"><div>
+    <span class="eyebrow">السوق الجزائري لمواد البناء</span>
+    <h1>كل ما يحتاجه مشروعك<br><em>من مواد البناء</em></h1>
+    <p>ابحث عن الموردين أو أرسل طلب عرض سعر للموقع.</p>
+    <div class="actions"><a class="goldbtn" href="#suppliers">اكتشف الموردين</a><a class="outlinebtn" href="#request">أرسل طلبك</a></div>
+  </div><div class="hero-art"><div class="ring"></div><div class="artbox"><span>▥</span><b>مواد البناء</b><small>من المصدر إلى مشروعك</small></div></div></section>
+  <section class="search"><div><small>ابدأ البحث</small><h2>ما الذي تبحث عنه اليوم؟</h2></div><form id="searchForm"><input id="q" placeholder="مثال: الإسمنت، الحديد" aria-label="ابحث عن مورد"><select id="wilaya" aria-label="الولاية"><option value="">كل الولايات</option><option>الجزائر</option><option>سطيف</option><option>وهران</option><option>قسنطينة</option><option>البليدة</option><option>باتنة</option></select><button type="submit">ابحث</button></form></section>
+  <section class="section" id="categories"><div class="heading"><div><small>تصفح حسب التخصص</small><h2>أقسام مواد البناء</h2></div></div><div class="cats">
+    <button class="cat selected" data-cat="">▦<b>جميع المواد</b><small>كل الأقسام</small></button>
+    <button class="cat" data-cat="الإسمنت والخرسانة">▤<b>الإسمنت والخرسانة</b><small>إسمنت وخرسانة</small></button>
+    <button class="cat" data-cat="حديد البناء">▥<b>حديد البناء</b><small>حديد وشبكات</small></button>
+    <button class="cat" data-cat="الآجر والبلوك">▧<b>الآجر والبلوك</b><small>آجر وبلوك</small></button>
+    <button class="cat" data-cat="الكهرباء والسباكة">⌁<b>الكهرباء والسباكة</b><small>تجهيزات</small></button>
+    <button class="cat" data-cat="التشطيبات">◇<b>التشطيبات</b><small>بلاط ودهان</small></button>
+  </div></section>
+  <section class="section" id="suppliers"><div class="heading"><div><small>اكتشف شبكة التوريد</small><h2>موردون حسب احتياجك</h2></div><span id="count"></span></div><div id="cards" class="cards"></div><div id="empty" class="empty" hidden><h3>لا توجد نتائج</h3><p>جرّب تغيير البحث أو الولاية.</p><button id="reset" type="button">إعادة ضبط البحث</button></div></section>
+  <section class="request" id="request"><div><small>وفّر وقت البحث</small><h2>لديك احتياجات لمشروعك؟<br><em>أرسل طلب عرض سعر.</em></h2><p>سيُرسل طلبك إلى بريد الموقع عبر FormSubmit، ويُحفظ أيضًا محليًا في هذا المتصفح. لا يصل تلقائيًا إلى الموردين قبل ربط خادم.</p></div>
+    <form id="rfq" action="https://formsubmit.co/abdohicher92@gmail.com" method="POST">
+      <h3>طلب عرض سعر</h3>
+      <input type="hidden" name="_subject" value="طلب عرض سعر جديد - Souqna">
+      <input type="hidden" name="_template" value="table">
+      <label>الاسم الكامل<input name="name" required autocomplete="name" placeholder="اسمك أو اسم الشركة"></label>
+      <div class="twocol">
+        <label>البريد الإلكتروني<input type="email" name="email" required autocomplete="email" placeholder="name@example.com"></label>
+        <label>رقم الهاتف<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="05 XX XX XX XX"></label>
+      </div>
+      <label>الولاية<select name="wilaya" required><option value="">اختر الولاية</option><option>الجزائر</option><option>سطيف</option><option>وهران</option><option>قسنطينة</option><option>البليدة</option><option>باتنة</option></select></label>
+      <label>الطلب / الرسالة<textarea name="details" required rows="3" placeholder="اذكر المواد والكميات ومكان التسليم..."></textarea></label>
+      <button type="submit">إرسال طلب عرض السعر</button>
+      <small class="note">سيُحفظ الطلب محليًا قبل إرساله. قد يطلب FormSubmit تأكيد البريد الإلكتروني عند أول إرسال.</small>
+      <p id="feedback" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer><a class="brand" href="#"><img src="logo.png" alt="SOUQNA" style="height:36px" onerror="this.hidden=true"><span><strong>Souqna</strong><small>سوقنا · الجزائر</small></span></a><p>منصة رقمية تربط محترفي البناء بموردي مواد البناء.</p><small>© <span id="year"></span> Souqna</small></footer>
+<script src="app.js"></script>
+</body>
+</html>
